@@ -6,7 +6,8 @@
     <title>formularios</title>
 </head>
 <body>
-    <form action="" autocomplete="off">
+    <h1>Formulários</h1>
+    <form action="cadastro.php" autocomplete="on" method="get">
         <label for="nome">Nome:</label>
         <input type="text" name="nome" id="nome">
         <br>
@@ -31,8 +32,11 @@
         <label for="color">Cor:</label>
         <input type="color" name="color" id="color">
         <br>
-        <label for="range">Range:</label>
-        <input type="range" name="range" id="range" min="1" max="999999999">
+        <p>
+            <label for="inum">numero</label>
+            <input type="range" name="num" id="inum" min="0" max="10" value="5" oninput="ival.innerHTML = number(inum.value)">
+            <output id="ival">5</output>
+        </p>
         <br>
         <label for="file">Arquivo:</label>
         <input type="file" name="file" id="file">
@@ -50,7 +54,7 @@
             <option value="3">Opção 3</option>
         </select>
         <br>
-        <label for="textarea">Textarea:</label>
+        <label for="textarea">Sinopse:</label><br>
         <textarea name="textarea" id="textarea"></textarea>
         <br>
         <input type="submit" value="Enviar">
